@@ -1,0 +1,199 @@
+<html>
+ <head>
+	</head>
+		<body>
+ 
+   
+	<div id="naglowek">
+       
+	   
+	  <center>
+		imie <br>
+     <input type="text" id="imie" onkeyup="aklik()"><br><br>
+	 
+       nazwisko<br>
+     <input type="text" id="nazwisko" onkeyup="bklik()"><br><br>
+	 
+		kod pocztowy<br>
+    <input type="text" id="kod" onkeyup="cklik()"><br><br>
+	
+		miasto<br>
+    <input type="text" id="miasto" onkeyup="dklik()"><br><br>
+	
+			Mail<br>
+      <input type="text" id="email" onkeyup="eklik()"><br><br>
+	  
+			telefon<br>
+      <input type="text" id="telefon" onkeyup="fklik()"><br><br> 
+	  
+   
+      </center>
+	  
+     </div>
+  
+ </body>
+    
+		<script>
+        
+function aklik()
+        
+		{
+				document.getElementById("naglowek").style.backgroundColor="green";
+            {
+            const string = document.getElementById("imie").value;
+           
+            const regex = /[A-Z]{1}[a-z]+/;
+					const match = regex.exec(string);
+				if (match)
+                {
+                    const name = match[1];
+                    
+						document.getElementById("naglowek").style.backgroundColor="red";
+                }
+				else{
+               
+                document.getElementById("naglowek").style.backgroundColor="green";
+				}
+				}
+        }
+   function bklik()
+            
+            {
+          
+			
+			const string = document.getElementById("nazwisko").value;
+           
+			
+				const regex = /[A-Z]{1}[a-z]+/;
+        const match = regex.exec(string);
+            if (match)
+                {
+                  
+				  const name = match[1];
+                    
+						document.getElementById("naglowek").style.backgroundColor="red";
+                }
+            else{
+               document.getElementById("naglowek").style.backgroundColor="green";
+            }
+          }
+        
+   function cklik()
+            
+            {
+			
+            const string = document.getElementById("kod").value;
+           
+            const regex = /[0-9]{2}-[0-9]{3}/;
+			const match = regex.exec(string);
+            if (match)
+                {
+                    const name = match[1];
+                  document.getElementById("naglowek").style.backgroundColor="red";
+                }
+            else{
+                document.getElementById("naglowek").style.backgroundColor="green";
+            }
+            }
+        
+   function dklik()
+   
+            {
+			
+            const string = document.getElementById("miasto").value;
+           
+            const regex = /[A-Z]{1}[a-z]+/;
+			const match = regex.exec(string);
+            if (match)
+                {
+                    const name = match[1];
+                   document.getElementById("naglowek").style.backgroundColor="red";
+                }
+            else{
+                document.getElementById("naglowek").style.backgroundColor="green";
+            }
+            }
+        
+   function eklik()
+            {
+                {
+            const string = document.getElementById("email").value;
+           
+                const regex = /[a-z]+@[a-z]+\.pl/;
+				const match = regex.exec(string);
+				
+            if (match)
+                {
+                    const name = match[1];
+                  
+				  document.getElementById("naglowek").style.backgroundColor="red";
+                }
+            else{
+               document.getElementById("naglowek").style.backgroundColor="green";
+            }
+                }
+                {
+            const string = document.getElementById("email").value;
+           
+            const regex = /[a-z]+@[a-z]+\.[a-z]+\.pl/;
+                
+        
+		const match = regex.exec(string);
+            if (match)
+                {
+                    const name = match[1];
+                   document.getElementById("naglowek").style.backgroundColor="red";
+                }
+            else{
+               document.getElementById("naglowek").style.backgroundColor="green";
+            }
+                }
+            }
+    
+	
+	function fklik()
+              {
+            const string = document.getElementById("telefon").value;
+           
+				
+					const regex = /[0-9]{3}-[0-9]{3}-[0-9]{3}/;
+					
+					const match = regex.exec(string);
+            if (match)
+                {
+                    const name = match[1];
+						document.getElementById("naglowek").style.backgroundColor="red";
+               
+			   }
+					
+					
+			else{
+              
+					document.getElementById("naglowek").style.backgroundColor="green";
+            }
+         }
+        
+        
+    </script>
+	
+ <style>
+
+
+#naglowek{
+	margin: 10px;
+	width: 940px;
+	height: 800px;
+	border: 2px solid black;
+}
+
+
+#wynik{
+	margin: 10px;
+	width: 250px;
+	height: 250px;
+	border: 2px solid black;
+     }
+
+
+ </style>
+</html>
